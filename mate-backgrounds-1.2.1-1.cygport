@@ -1,0 +1,10 @@
+inherit mate
+
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	# The po/ files are just for intltool, not to be installed
+	rm -fr ${D}/usr/share/locale/
+}
