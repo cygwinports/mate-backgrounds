@@ -1,0 +1,17 @@
+inherit mate
+
+NAME="mate-backgrounds"
+VERSION=1.4.0
+RELEASE=1
+CATEGORY="MATE"
+SUMMARY="MATE desktop backgrounds"
+DESCRIPTION="MATE is a fork of the GNOME 2 desktop. It provides an intuitive
+and attractive desktop to Linux users using traditional metaphors."
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	# The po/ files are just for intltool, not to be installed
+	rm -fr ${D}/usr/share/locale/
+}
