@@ -1,12 +1,14 @@
 inherit mate
 
 NAME="mate-backgrounds"
-VERSION=1.6.0
+VERSION=1.8.0
 RELEASE=1
 CATEGORY="MATE"
 SUMMARY="MATE desktop backgrounds"
 DESCRIPTION="MATE is a fork of the GNOME 2 desktop. It provides an intuitive
 and attractive desktop to Linux users using traditional metaphors."
+
+ARCH=noarch
 
 src_install() {
 	cd ${B}
